@@ -1,5 +1,5 @@
 # Note
-**This Project is API project build on Rust [Rocket Framework] and Mongodb**
+**This project leverages Rust's Rocket Framework in conjunction with MongoDB to build an API.**
 
 ---
 
