@@ -8,7 +8,7 @@
 ```sh
 cargo install .
 ```
-Environmental variable required you can use .env file on project location
+Environmental variable required, you can use .env file on project location
 
 ```sh
 DATABASE_URL="mongodb://localhost:27017"
