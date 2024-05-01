@@ -23,7 +23,6 @@ struct StreamKeyResponse {
 #[derive(Debug, Deserialize)]
 struct PublishData {
     ip: String,
-    proto: String,
     name: String,
 }
 
@@ -88,7 +87,6 @@ async fn check_stream_key(publish_data: &PublishData) -> Result<bool, String> {
         "streamkey": publish_data.name.split('/').nth(1).unwrap(),
         "username": publish_data.name.split('/').nth(0).unwrap(),
         "suspend": false,
-        "streamType": &publish_data.proto,
         "blacklist": { "$nin": [ &publish_data.ip ] }
     };
 
