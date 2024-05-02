@@ -29,6 +29,7 @@ WORKDIR /usr/src/myapp
 
 # Copy the compiled binary from the builder stage to the final image
 COPY --from=builder /usr/src/myapp/target/x86_64-unknown-linux-musl/release/flussonic-publishing-handler .
+COPY --from=builder /usr/src/myapp/Rocket.toml .
 
 # Expose the port that your Rocket application listens on
 EXPOSE 8000
